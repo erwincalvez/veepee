@@ -28,6 +28,10 @@
 
 }
 
+:focus {
+  outline: 4px solid hotpink;
+}
+
 * {
   box-sizing: border-box;
 }
@@ -35,6 +39,7 @@
 body {
   margin: 0;
   background-color: var(--bg-color);
+  /* background-image: url(../images/STHALA_MARC_PATRA.png); */
   font-family: "SevenOneEight-Light";
   color: #000;
   /* padding-bottom: 200px; */
@@ -74,6 +79,40 @@ h1, h2, h3, h4 {
   margin-bottom: 1em;
 }
 
+
+/*==================
+Navigation
+===================*/
+
+.nav-menu {
+  background-color: var(--secondary-color);
+  color: #fff;
+  text-align: left;
+  padding: 20px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  transform: translateX(-20%);
+  z-index: 9999999;
+  transition: transform 300ms;
+}
+
+
+.nav-menu-is-showing {
+  transform: translateX(0);
+}
+.nav-menu ul{
+  padding: 0;
+  list-style: none;
+}
+.nav-menu li{
+  margin: 5px 0;
+}
+
+.nav-menu a {
+  color: inherit;
+  text-decoration: none;
+}
 
 /*==================
 HEADER
@@ -535,11 +574,36 @@ FOOTER
 
 @media screen and (min-width: 960px) {
 
-  .destinations-list {
+  .destination-list-group {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
+    margin-bottom: 40px;
+    position: relative;
 
+  }
+
+  .destination-list-group::before {
+    content: "";
+    display: block;
+    background-color:var(--main-color);
+    position: absolute;
+    height: 100%;
+    width: 4px;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+  .destination-list-group::after {
+    content:"";
+    display: block;
+    width: 15px;
+    height: 15px;
+    background-color: var(--secondary-color);
+    position: absolute;
+    bottom: -10px;
+    left: 50%;
+    transform: translateX(-50%);
   }
 
   .destination-item {

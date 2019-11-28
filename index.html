@@ -13,28 +13,36 @@
   src="https://code.jquery.com/jquery-3.4.1.min.js"
   integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
   crossorigin="anonymous"></script>
-  <script src="destinations.json"></script>
-  <script src="test.json"></script>
+  <!-- <script src="destinations.json"></script> -->
+  <!-- <script src="test.json"></script> -->
 
 </head>
 <body class="the-body">
   <header class="header-main">
+    <button class="toggle-menu" type="button" name="button" aria-label="show navigation menu" role="button"><i class="fas fa-bars"></i></button>
+    <nav class="nav-menu" role="navigation">
+      <button class="toggle-menu" type="button" name="button" aria-label="close navigation menu" role="button"><i class="fas fa-times"></i></button>
+      <ul>
+        <li>
+          <a href="#">Contact</a>
+        </li>
+        <li>
+          <a href="#">About</a>
+        </li>
+        <li>
+          <a href="#">References</a>
+        </li>
+        <li>
+          <a href="#">Gallery</a>
+        </li>
+      </ul>
+
+    </nav>
     <h1 class="title title--main color--secondary uppercase">Découvrez les offres du moment</h1>
     <p class="header-baseline header-baseline--deco">Vol + hôtel négociés jusqu'à -70%</p>
 
   </header>
-  <script type="text/javascript">
-
-    var xhttp = new XMLHttpRequest();
-    xhttp.onreadystatechange = function() {
-      if (this.readyState == 4 && this.status == 200) {
-        console.log(xhttp.responseText);
-      }
-    };
-    xhttp.open("GET", "test.json", true);
-    xhttp.send();
-
-  </script>
+  
   <ul id="destin">
 
   </ul>
@@ -70,327 +78,329 @@ document.getElementById("destin").innerHTML = output;
     </div>
   </form>
 
-
-
   <section class="destinations-list">
+    <div class="destination-list-group">
+      <article class="destination-item">
+        <figure class="destination-item--illustration">
+          <div class="single-item">
+            <img class="destination-item--image" src="images/FAIRMONT_DUBAI.png" alt="japon">
+          </div>
+          <figcaption>
+            <p class="destination-item--upto">Dès 67€</p>
+          </figcaption>
+        </figure>
+        <div class="destination-item--body">
+          <h2 class="destination-item--title">
+            <span class="destination-item--country">Emirats Arabes unis</span>
+            <span class="destination-item--title__separator"></span>
+            <span class="destination-item--place">Dubaï</span>
+          </h2>
+          <div class="destination-item--details">
+            <span class="destination-item--label">Hyatt Regency Creek</span>
+            <span class="destination-item--rating">
+              <i class="fas fa-star star"></i>
+              <i class="fas fa-star star"></i>
+              <i class="fas fa-star star"></i>
+              <i class="fas fa-star star"></i>
+              <i class="fas fa-star star"></i>
+            </span>
+          </div>
+          <div class="destination-item--tags">
+            <span class="destination-item--premium">Premium</span>
+            <span class="destination-item--option">Surclassement offert</span>
+          </div>
+          <a href="#" class="cta cta--destination"><i class="fas fa-chevron-right"></i><span class="" hidden>Read more about this offer</span></a>
+        </div><!-- .destination-item--body -->
+      </article>
+      <article class="destination-item">
+        <figure class="destination-item--illustration">
+          <div class="single-item">
+            <img class="destination-item--image" src="images/JAPON.jpg" alt="japon">
+            <img class="destination-item--image" src="images/FAIRMONT_DUBAI.png" alt="japon">
+            <img class="destination-item--image" src="images/IMPIANA_RESORT_SAMUI.png" alt="japon">
+            <img class="destination-item--image" src="images/NOKU_MALDIVES.png" alt="japon">
+          </div>
+          <figcaption>
+            <p class="destination-item--upto">Jusqu'à -64%</p>
+          </figcaption>
+        </figure>
+        <div class="destination-item--body">
+          <h2 class="destination-item--title">
+            <span class="destination-item--country">Maurice</span>
+            <span class="destination-item--title__separator"></span>
+            <span class="destination-item--place">Grand Rivière</span>
+          </h2>
+          <div class="destination-item--details">
+            <span class="destination-item--label">Laguna Beach Hotel & Spa</span>
+            <span class="destination-item--rating">
+              <i class="fas fa-star star"></i>
+              <i class="fas fa-star star"></i>
+              <i class="fas fa-star star"></i>
+              <i class="fas fa-star star"></i>
+            </span>
+          </div>
+          <div class="destination-item--tags">
+            <span class="destination-item--premium">Tout inclus</span>
+            <span class="destination-item--option">Spa</span>
+          </div>
+          <a href="#" class="cta cta--destination"><i class="fas fa-chevron-right"></i><span class="sr-only">Read more about this offer</span></a>
+        </div><!-- .destination-item--body -->
+      </article>
+      <article class="destination-item">
+        <figure class="destination-item--illustration">
+          <div class="single-item">
+            <img class="destination-item--image" src="images/CLOS_DU_LITTORAL.png" alt="japon">
+          </div>
+          <figcaption>
+            <p class="destination-item--upto">Dès 99€</p>
+          </figcaption>
+        </figure>
+        <div class="destination-item--body">
+          <h2 class="destination-item--title">
+            <span class="destination-item--country">Emirates Arabes Unis</span>
+            <span class="destination-item--title__separator"></span>
+            <span class="destination-item--place">Dubaï</span>
+          </h2>
+          <div class="destination-item--details">
+            <span class="destination-item--label">Fairmont Dubaï</span>
+            <span class="destination-item--rating">
+              <i class="fas fa-star star"></i>
+              <i class="fas fa-star star"></i>
+              <i class="fas fa-star star"></i>
+              <i class="fas fa-star star"></i>
+              <i class="fas fa-star star"></i>
+            </span>
+          </div>
+          <div class="destination-item--tags">
+            <span class="destination-item--premium">Premium</span>
+            <span class="destination-item--option">Rooftop</span>
+          </div>
+          <a href="#" class="cta cta--destination"><i class="fas fa-chevron-right"></i><span class="sr-only">Read more about this offer</span></a>
+        </div><!-- .destination-item--body -->
+      </article>
+      <article class="destination-item">
+        <figure class="destination-item--illustration">
+          <div class="single-item">
+            <img class="destination-item--image" src="images/HYATT_REGENCY_CREEK.png" alt="japon">
+          </div>
+          <figcaption>
+            <p class="destination-item--upto">Dès 469€</p>
+          </figcaption>
+        </figure>
+        <div class="destination-item--body">
+          <h2 class="destination-item--title">
+            <span class="destination-item--country">Indonésie</span>
+            <span class="destination-item--title__separator"></span>
+            <span class="destination-item--place">Bali & Gili</span>
+          </h2>
+          <div class="destination-item--details">
+            <span class="destination-item--label">Combiné Sthala - Marc - Patra</span>
+            <span class="destination-item--rating">
 
-    <article class="destination-item">
-      <figure class="destination-item--illustration">
-        <div class="single-item">
-          <img class="destination-item--image" src="images/FAIRMONT_DUBAI.png" alt="japon">
-        </div>
-        <figcaption>
-          <p class="destination-item--upto">Dès 67€</p>
-        </figcaption>
-      </figure>
-      <div class="destination-item--body">
-        <h2 class="destination-item--title">
-          <span class="destination-item--country">Emirats Arabes unis</span>
-          <span class="destination-item--title__separator"></span>
-          <span class="destination-item--place">Dubaï</span>
-        </h2>
-        <div class="destination-item--details">
-          <span class="destination-item--label">Hyatt Regency Creek</span>
-          <span class="destination-item--rating">
-            <i class="fas fa-star star"></i>
-            <i class="fas fa-star star"></i>
-            <i class="fas fa-star star"></i>
-            <i class="fas fa-star star"></i>
-            <i class="fas fa-star star"></i>
-          </span>
-        </div>
-        <div class="destination-item--tags">
-          <span class="destination-item--premium">Premium</span>
-          <span class="destination-item--option">Surclassement offert</span>
-        </div>
-        <a href="#" class="cta cta--destination"><i class="fas fa-chevron-right"></i><span class="sr-only">Read more about this offer</span></a>
-      </div><!-- .destination-item--body -->
-    </article>
-    <article class="destination-item">
-      <figure class="destination-item--illustration">
-        <div class="single-item">
-          <img class="destination-item--image" src="images/JAPON.jpg" alt="japon">
-          <img class="destination-item--image" src="images/FAIRMONT_DUBAI.png" alt="japon">
-          <img class="destination-item--image" src="images/IMPIANA_RESORT_SAMUI.png" alt="japon">
-          <img class="destination-item--image" src="images/NOKU_MALDIVES.png" alt="japon">
-        </div>
-        <figcaption>
-          <p class="destination-item--upto">Jusqu'à -64%</p>
-        </figcaption>
-      </figure>
-      <div class="destination-item--body">
-        <h2 class="destination-item--title">
-          <span class="destination-item--country">Maurice</span>
-          <span class="destination-item--title__separator"></span>
-          <span class="destination-item--place">Grand Rivière</span>
-        </h2>
-        <div class="destination-item--details">
-          <span class="destination-item--label">Laguna Beach Hotel & Spa</span>
-          <span class="destination-item--rating">
-            <i class="fas fa-star star"></i>
-            <i class="fas fa-star star"></i>
-            <i class="fas fa-star star"></i>
-            <i class="fas fa-star star"></i>
-          </span>
-        </div>
-        <div class="destination-item--tags">
-          <span class="destination-item--premium">Tout inclus</span>
-          <span class="destination-item--option">Spa</span>
-        </div>
-        <a href="#" class="cta cta--destination"><i class="fas fa-chevron-right"></i><span class="sr-only">Read more about this offer</span></a>
-      </div><!-- .destination-item--body -->
-    </article>
-    <article class="destination-item">
-      <figure class="destination-item--illustration">
-        <div class="single-item">
-          <img class="destination-item--image" src="images/CLOS_DU_LITTORAL.png" alt="japon">
-        </div>
-        <figcaption>
-          <p class="destination-item--upto">Dès 99€</p>
-        </figcaption>
-      </figure>
-      <div class="destination-item--body">
-        <h2 class="destination-item--title">
-          <span class="destination-item--country">Emirates Arabes Unis</span>
-          <span class="destination-item--title__separator"></span>
-          <span class="destination-item--place">Dubaï</span>
-        </h2>
-        <div class="destination-item--details">
-          <span class="destination-item--label">Fairmont Dubaï</span>
-          <span class="destination-item--rating">
-            <i class="fas fa-star star"></i>
-            <i class="fas fa-star star"></i>
-            <i class="fas fa-star star"></i>
-            <i class="fas fa-star star"></i>
-            <i class="fas fa-star star"></i>
-          </span>
-        </div>
-        <div class="destination-item--tags">
-          <span class="destination-item--premium">Premium</span>
-          <span class="destination-item--option">Rooftop</span>
-        </div>
-        <a href="#" class="cta cta--destination"><i class="fas fa-chevron-right"></i><span class="sr-only">Read more about this offer</span></a>
-      </div><!-- .destination-item--body -->
-    </article>
-    <article class="destination-item">
-      <figure class="destination-item--illustration">
-        <div class="single-item">
-          <img class="destination-item--image" src="images/HYATT_REGENCY_CREEK.png" alt="japon">
-        </div>
-        <figcaption>
-          <p class="destination-item--upto">Dès 469€</p>
-        </figcaption>
-      </figure>
-      <div class="destination-item--body">
-        <h2 class="destination-item--title">
-          <span class="destination-item--country">Indonésie</span>
-          <span class="destination-item--title__separator"></span>
-          <span class="destination-item--place">Bali & Gili</span>
-        </h2>
-        <div class="destination-item--details">
-          <span class="destination-item--label">Combiné Sthala - Marc - Patra</span>
-          <span class="destination-item--rating">
+            </span>
+          </div>
+          <div class="destination-item--tags">
+            <span class="destination-item--premium">Combiné</span>
+            <span class="destination-item--option">Petit déjeuner inclus</span>
+          </div>
+          <a href="#" class="cta cta--destination"><i class="fas fa-chevron-right"></i><span class="sr-only">Read more about this offer</span></a>
+        </div><!-- .destination-item--body -->
+      </article>
+      <article class="destination-item">
+        <figure class="destination-item--illustration">
+          <div class="single-item">
+            <img class="destination-item--image" src="images/NOKU_MALDIVES.png" alt="japon">
+          </div>
+          <figcaption>
+            <p class="destination-item--upto">Jusqu'à -36%</p>
+          </figcaption>
+        </figure>
+        <div class="destination-item--body">
+          <h2 class="destination-item--title">
+            <span class="destination-item--country">Maldives</span>
+            <span class="destination-item--title__separator"></span>
+            <span class="destination-item--place">Atoll de Noonu</span>
+          </h2>
+          <div class="destination-item--details">
+            <span class="destination-item--label">Noku Maldives</span>
+            <span class="destination-item--rating">
+              <i class="fas fa-star star"></i>
+              <i class="fas fa-star star"></i>
+              <i class="fas fa-star star"></i>
+              <i class="fas fa-star star"></i>
+              <i class="fas fa-star star"></i>
+            </span>
+          </div>
+          <div class="destination-item--tags">
+            <span class="destination-item--premium">Premium</span>
+            <span class="destination-item--option">Massage offert</span>
+          </div>
+          <a href="#" class="cta cta--destination"><i class="fas fa-chevron-right"></i><span class="sr-only">Read more about this offer</span></a>
+        </div><!-- .destination-item--body -->
+      </article>
+      <article class="destination-item">
+        <figure class="destination-item--illustration">
+          <div class="single-item">
+            <img class="destination-item--image" src="images/IMPIANA_RESORT_SAMUI.png" alt="japon">
+            <img class="destination-item--image" src="images/ECHAPEE_SRI_LANKAISE.png" alt="japon">
+            <img class="destination-item--image" src="images/LAGUNA_BEACH.png" alt="japon">
+          </div>
+          <figcaption>
+            <p class="destination-item--upto">Jusqu'à -70%</p>
+          </figcaption>
+        </figure>
+        <div class="destination-item--body">
+          <h2 class="destination-item--title">
+            <span class="destination-item--country">Thaïlande</span>
+            <span class="destination-item--title__separator"></span>
+            <span class="destination-item--place">Koh Samui</span>
+          </h2>
+          <div class="destination-item--details">
+            <span class="destination-item--label">Impiana Resort Samui</span>
+            <span class="destination-item--rating">
+              <i class="fas fa-star star"></i>
+              <i class="fas fa-star star"></i>
+              <i class="fas fa-star star"></i>
+              <i class="fas fa-star star"></i>
+            </span>
+          </div>
+          <div class="destination-item--tags">
+            <span class="destination-item--premium">Massage offert</span>
+            <span class="destination-item--option">Surclassement offert</span>
+          </div>
+          <a href="#" class="cta cta--destination"><i class="fas fa-chevron-right"></i><span class="sr-only">Read more about this offer</span></a>
+        </div><!-- .destination-item--body -->
+      </article>
 
-          </span>
-        </div>
-        <div class="destination-item--tags">
-          <span class="destination-item--premium">Combiné</span>
-          <span class="destination-item--option">Petit déjeuner inclus</span>
-        </div>
-        <a href="#" class="cta cta--destination"><i class="fas fa-chevron-right"></i><span class="sr-only">Read more about this offer</span></a>
-      </div><!-- .destination-item--body -->
-    </article>
-    <article class="destination-item">
-      <figure class="destination-item--illustration">
-        <div class="single-item">
-          <img class="destination-item--image" src="images/NOKU_MALDIVES.png" alt="japon">
-        </div>
-        <figcaption>
-          <p class="destination-item--upto">Jusqu'à -36%</p>
-        </figcaption>
-      </figure>
-      <div class="destination-item--body">
-        <h2 class="destination-item--title">
-          <span class="destination-item--country">Maldives</span>
-          <span class="destination-item--title__separator"></span>
-          <span class="destination-item--place">Atoll de Noonu</span>
-        </h2>
-        <div class="destination-item--details">
-          <span class="destination-item--label">Noku Maldives</span>
-          <span class="destination-item--rating">
-            <i class="fas fa-star star"></i>
-            <i class="fas fa-star star"></i>
-            <i class="fas fa-star star"></i>
-            <i class="fas fa-star star"></i>
-            <i class="fas fa-star star"></i>
-          </span>
-        </div>
-        <div class="destination-item--tags">
-          <span class="destination-item--premium">Premium</span>
-          <span class="destination-item--option">Massage offert</span>
-        </div>
-        <a href="#" class="cta cta--destination"><i class="fas fa-chevron-right"></i><span class="sr-only">Read more about this offer</span></a>
-      </div><!-- .destination-item--body -->
-    </article>
-    <article class="destination-item">
-      <figure class="destination-item--illustration">
-        <div class="single-item">
-          <img class="destination-item--image" src="images/IMPIANA_RESORT_SAMUI.png" alt="japon">
-          <img class="destination-item--image" src="images/ECHAPEE_SRI_LANKAISE.png" alt="japon">
-          <img class="destination-item--image" src="images/LAGUNA_BEACH.png" alt="japon">
-        </div>
-        <figcaption>
-          <p class="destination-item--upto">Jusqu'à -70%</p>
-        </figcaption>
-      </figure>
-      <div class="destination-item--body">
-        <h2 class="destination-item--title">
-          <span class="destination-item--country">Thaïlande</span>
-          <span class="destination-item--title__separator"></span>
-          <span class="destination-item--place">Koh Samui</span>
-        </h2>
-        <div class="destination-item--details">
-          <span class="destination-item--label">Impiana Resort Samui</span>
-          <span class="destination-item--rating">
-            <i class="fas fa-star star"></i>
-            <i class="fas fa-star star"></i>
-            <i class="fas fa-star star"></i>
-            <i class="fas fa-star star"></i>
-          </span>
-        </div>
-        <div class="destination-item--tags">
-          <span class="destination-item--premium">Massage offert</span>
-          <span class="destination-item--option">Surclassement offert</span>
-        </div>
-        <a href="#" class="cta cta--destination"><i class="fas fa-chevron-right"></i><span class="sr-only">Read more about this offer</span></a>
-      </div><!-- .destination-item--body -->
-    </article>
-    <article class="destination-item">
-      <figure class="destination-item--illustration">
-        <div class="single-item">
-          <img class="destination-item--image" src="images/ECHAPEE_SRI_LANKAISE.png" alt="japon">
-        </div>
-        <figcaption>
-          <p class="destination-item--upto">Dès 538€</p>
-        </figcaption>
-      </figure>
-      <div class="destination-item--body">
-        <h2 class="destination-item--title">
-          <span class="destination-item--country">Maurice</span>
-          <span class="destination-item--title__separator"></span>
-          <span class="destination-item--place">Grand Baie</span>
-        </h2>
-        <div class="destination-item--details">
-          <span class="destination-item--label">Clos du Littoral</span>
-          <span class="destination-item--rating">
-            <i class="fas fa-star star"></i>
-            <i class="fas fa-star star"></i>
-            <i class="fas fa-star star"></i>
-            <i class="fas fa-star star"></i>
-          </span>
-        </div>
-        <div class="destination-item--tags">
-          <span class="destination-item--premium">Premium</span>
-          <span class="destination-item--option">Villas avec Piscine Privée</span>
-        </div>
-        <a href="#" class="cta cta--destination"><i class="fas fa-chevron-right"></i><span class="sr-only">Read more about this offer</span></a>
-      </div><!-- .destination-item--body -->
-    </article>
-    <article class="destination-item">
-      <figure class="destination-item--illustration">
-        <div class="single-item">
-          <img class="destination-item--image" src="images/IMPIANA_RESORT_SAMUI.png" alt="japon">
-        </div>
-        <figcaption>
-          <p class="destination-item--upto">Dès 699€</p>
-        </figcaption>
-      </figure>
-      <div class="destination-item--body">
-        <h2 class="destination-item--title">
-          <span class="destination-item--country">Sri Lanka</span>
-          <span class="destination-item--title__separator"></span>
-          <span class="destination-item--place">Sri Lanka</span>
-        </h2>
-        <div class="destination-item--details">
-          <span class="destination-item--label">Echappée SriLankaise</span>
-          <span class="destination-item--rating">
-            <i class="fas fa-star star"></i>
-            <i class="fas fa-star star"></i>
-            <i class="fas fa-star star"></i>
-          </span>
-        </div>
-        <div class="destination-item--tags">
-          <span class="destination-item--premium">Circuit</span>
-          <span class="destination-item--option">Privatif</span>
-        </div>
-        <a href="#" class="cta cta--destination"><i class="fas fa-chevron-right"></i><span class="sr-only">Read more about this offer</span></a>
-      </div><!-- .destination-item--body -->
-    </article>
-    <article class="destination-item">
-      <figure class="destination-item--illustration">
-        <div class="single-item">
-          <img class="destination-item--image" src="images/STHALA_MARC_PATRA.png" alt="japon">
-          <img class="destination-item--image" src="images/IMPIANA_RESORT_SAMUI.png" alt="japon">
-          <img class="destination-item--image" src="images/JAPON.jpg" alt="japon">
-        </div>
-        <figcaption>
-          <p class="destination-item--upto">Dès 114€</p>
-        </figcaption>
-      </figure>
-      <div class="destination-item--body">
-        <h2 class="destination-item--title">
-          <span class="destination-item--country">Japon</span>
-          <span class="destination-item--title__separator"></span>
-          <span class="destination-item--place">Tokyo</span>
-        </h2>
-        <div class="destination-item--details">
-          <span class="destination-item--label">Grand Arc Hanzomon</span>
-          <span class="destination-item--rating">
-            <i class="fas fa-star star"></i>
-            <i class="fas fa-star star"></i>
-            <i class="fas fa-star star"></i>
-            <i class="fas fa-star star"></i>
-          </span>
-        </div>
-        <div class="destination-item--tags">
-          <span class="destination-item--premium">City Break</span>
-          <span class="destination-item--option">Insolite</span>
-        </div>
-        <a href="#" class="cta cta--destination"><i class="fas fa-chevron-right"></i><span class="sr-only">Read more about this offer</span></a>
-      </div><!-- .destination-item--body -->
-    </article>
-    <article class="destination-item">
-      <figure class="destination-item--illustration">
-        <div class="single-item">
-          <img class="destination-item--image" src="images/LAGUNA_BEACH.png" alt="japon">
-        </div>
-        <figcaption>
-          <p class="destination-item--upto">Dès 779€</p>
-        </figcaption>
-      </figure>
-      <div class="destination-item--body">
-        <h2 class="destination-item--title">
-          <span class="destination-item--country">Vietnam</span>
-          <span class="destination-item--title__separator"></span>
-          <span class="destination-item--place">De Hanoï à Hoi An</span>
-        </h2>
-        <div class="destination-item--details">
-          <span class="destination-item--label">Entre Culture et Plages</span>
-          <span class="destination-item--rating">
-            <i class="fas fa-star star"></i>
-            <i class="fas fa-star star"></i>
-            <i class="fas fa-star star"></i>
-            <i class="fas fa-star star"></i>
-          </span>
-        </div>
-        <div class="destination-item--tags">
-          <span class="destination-item--premium">Circuit</span>
-          <span class="destination-item--option">Privatif</span>
-        </div>
-        <a href="#" class="cta cta--destination"><i class="fas fa-chevron-right"></i><span class="sr-only">Read more about this offer</span></a>
-      </div><!-- .destination-item--body -->
-    </article>
+    </div><!-- .destination-list-group -->
+    <div class="destination-list-group">
 
+      <article class="destination-item">
+        <figure class="destination-item--illustration">
+          <div class="single-item">
+            <img class="destination-item--image" src="images/ECHAPEE_SRI_LANKAISE.png" alt="japon">
+          </div>
+          <figcaption>
+            <p class="destination-item--upto">Dès 538€</p>
+          </figcaption>
+        </figure>
+        <div class="destination-item--body">
+          <h2 class="destination-item--title">
+            <span class="destination-item--country">Maurice</span>
+            <span class="destination-item--title__separator"></span>
+            <span class="destination-item--place">Grand Baie</span>
+          </h2>
+          <div class="destination-item--details">
+            <span class="destination-item--label">Clos du Littoral</span>
+            <span class="destination-item--rating">
+              <i class="fas fa-star star"></i>
+              <i class="fas fa-star star"></i>
+              <i class="fas fa-star star"></i>
+              <i class="fas fa-star star"></i>
+            </span>
+          </div>
+          <div class="destination-item--tags">
+            <span class="destination-item--premium">Premium</span>
+            <span class="destination-item--option">Villas avec Piscine Privée</span>
+          </div>
+          <a href="#" class="cta cta--destination"><i class="fas fa-chevron-right"></i><span class="sr-only">Read more about this offer</span></a>
+        </div><!-- .destination-item--body -->
+      </article>
+      <article class="destination-item">
+        <figure class="destination-item--illustration">
+          <div class="single-item">
+            <img class="destination-item--image" src="images/IMPIANA_RESORT_SAMUI.png" alt="japon">
+          </div>
+          <figcaption>
+            <p class="destination-item--upto">Dès 699€</p>
+          </figcaption>
+        </figure>
+        <div class="destination-item--body">
+          <h2 class="destination-item--title">
+            <span class="destination-item--country">Sri Lanka</span>
+            <span class="destination-item--title__separator"></span>
+            <span class="destination-item--place">Sri Lanka</span>
+          </h2>
+          <div class="destination-item--details">
+            <span class="destination-item--label">Echappée SriLankaise</span>
+            <span class="destination-item--rating">
+              <i class="fas fa-star star"></i>
+              <i class="fas fa-star star"></i>
+              <i class="fas fa-star star"></i>
+            </span>
+          </div>
+          <div class="destination-item--tags">
+            <span class="destination-item--premium">Circuit</span>
+            <span class="destination-item--option">Privatif</span>
+          </div>
+          <a href="#" class="cta cta--destination"><i class="fas fa-chevron-right"></i><span class="sr-only">Read more about this offer</span></a>
+        </div><!-- .destination-item--body -->
+      </article>
+      <article class="destination-item">
+        <figure class="destination-item--illustration">
+          <div class="single-item">
+            <img class="destination-item--image" src="images/STHALA_MARC_PATRA.png" alt="japon">
+            <img class="destination-item--image" src="images/IMPIANA_RESORT_SAMUI.png" alt="japon">
+            <img class="destination-item--image" src="images/JAPON.jpg" alt="japon">
+          </div>
+          <figcaption>
+            <p class="destination-item--upto">Dès 114€</p>
+          </figcaption>
+        </figure>
+        <div class="destination-item--body">
+          <h2 class="destination-item--title">
+            <span class="destination-item--country">Japon</span>
+            <span class="destination-item--title__separator"></span>
+            <span class="destination-item--place">Tokyo</span>
+          </h2>
+          <div class="destination-item--details">
+            <span class="destination-item--label">Grand Arc Hanzomon</span>
+            <span class="destination-item--rating">
+              <i class="fas fa-star star"></i>
+              <i class="fas fa-star star"></i>
+              <i class="fas fa-star star"></i>
+              <i class="fas fa-star star"></i>
+            </span>
+          </div>
+          <div class="destination-item--tags">
+            <span class="destination-item--premium">City Break</span>
+            <span class="destination-item--option">Insolite</span>
+          </div>
+          <a href="#" class="cta cta--destination"><i class="fas fa-chevron-right"></i><span class="sr-only">Read more about this offer</span></a>
+        </div><!-- .destination-item--body -->
+      </article>
+      <article class="destination-item">
+        <figure class="destination-item--illustration">
+          <div class="single-item">
+            <img class="destination-item--image" src="images/LAGUNA_BEACH.png" alt="japon">
+          </div>
+          <figcaption>
+            <p class="destination-item--upto">Dès 779€</p>
+          </figcaption>
+        </figure>
+        <div class="destination-item--body">
+          <h2 class="destination-item--title">
+            <span class="destination-item--country">Vietnam</span>
+            <span class="destination-item--title__separator"></span>
+            <span class="destination-item--place">De Hanoï à Hoi An</span>
+          </h2>
+          <div class="destination-item--details">
+            <span class="destination-item--label">Entre Culture et Plages</span>
+            <span class="destination-item--rating">
+              <i class="fas fa-star star"></i>
+              <i class="fas fa-star star"></i>
+              <i class="fas fa-star star"></i>
+              <i class="fas fa-star star"></i>
+            </span>
+          </div>
+          <div class="destination-item--tags">
+            <span class="destination-item--premium">Circuit</span>
+            <span class="destination-item--option">Privatif</span>
+          </div>
+          <a href="#" class="cta cta--destination"><i class="fas fa-chevron-right"></i><span class="sr-only">Read more about this offer</span></a>
+        </div><!-- .destination-item--body -->
+      </article>
+    </div><!-- .destination-list-group -->
   </section>
 
   <div class="offer">
@@ -446,10 +456,11 @@ document.getElementById("destin").innerHTML = output;
   <p class="footer-item footer-item--deco">Vol + hôtel négociés jusqu'à -70%</p>
 </footer>
 
+<script src="js/inert.js"></script>
 <script src="slick/slick.min.js"></script>
 <script src="https://24jsw1qv.twic.pics?v1" async></script>
 
-<script src="js/venteprivee.js"></script>
+<script src="./js/venteprivee.js"></script>
 
 
 </body>
