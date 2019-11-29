@@ -116,7 +116,8 @@ SKIP LINKS
 /*==================
 Navigation
 ===================*/
-.toggle-menu {
+
+.btn--action {
   border: 0;
   background-color: var(--secondary-color);
   color: #fff;
@@ -124,33 +125,47 @@ Navigation
   height: 50px;
   width: 50px;
   font-size: 2rem;
-
-
-
-}
-.open-menu {
-  border: 0;
-  background-color: var(--secondary-color);
-  color: #fff;
-  cursor: pointer;
-  height: 50px;
-  width: 50px;
   display: flex;
   align-items: center;
   justify-content: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+}
+.btn--toggle-menu {
   position: absolute;
   top: 10px;
   left: 10px;
-  font-size: 2rem;
   border-radius: 3px;
 }
-.close-menu {
+.btn--close-menu {
   top: 10px;
   right: 10px;
   position: absolute;
-  top: 5px;
-  right: 5px;
+
 }
+
+.btn--scroll-top {
+  border-radius: 50%;
+  position: fixed;
+  bottom: 10px;
+  right: 10px;
+  text-decoration: none;
+  opacity: .1;
+  transition: opacity 300ms;
+}
+
+.btn--scroll-top-is-visible {
+  opacity: .7;
+}
+.btn--scroll-top:hover {
+  opacity: 1;
+}
+
+
+
+
 .nav-menu {
   background-color: var(--secondary-color);
   color: #fff;
@@ -159,9 +174,9 @@ Navigation
   padding-top: 50px;
   position: fixed;
   z-index: 999999999;
-  top: 150px;
+  top: 0;
   left: 0;
-  transform: translateX(-20%);
+  transform: translateX(-110%);
 
   transition: transform 300ms;
   width: 400px;
@@ -646,6 +661,9 @@ FOOTER
   width: 80%;
   margin: 10px auto 0;
 }
+
+
+
 
 
 @media screen and (min-width: 960px) {

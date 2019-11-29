@@ -17,15 +17,15 @@
   <!-- <script src="test.json"></script> -->
 
 </head>
-<body class="the-body">
+<body class="the-body" id="site-top">
   <ul class="skip-links" role="navigation" aria-label="skip links">
     <li class="skip-links__item"><a href="#nav-menu" class="skip-link--toggle-menu">Main navigation</a></li>
     <li  class="skip-links__item"><a href="#main-content">Main content</a></li>
   </ul>
   <header class="header-main">
-    <button class="toggle-menu open-menu" type="button" name="button" aria-label="show navigation menu" role="button"><i class="fas fa-bars"></i></button>
+    <button class="open-menu btn btn--action btn--toggle-menu" type="button" name="button" aria-label="show navigation menu" role="button"><i class="fas fa-bars"></i><span class="sr-only">Hey show navigation menu</span></button>
     <nav class="nav-menu" role="navigation" id="nav-menu" >
-      <button class="toggle-menu close-menu" type="button" name="button" aria-label="close navigation menu" role="button"><i class="fas fa-times"></i></button>
+      <button class="btn btn--action btn--toggle-menu btn--close-menu" type="button" name="button" aria-label="close navigation menu" role="button"><i class="fas fa-times"></i></button>
       <ul>
         <li>
           <a href="#">Contact</a>
@@ -458,6 +458,7 @@ document.getElementById("destin").innerHTML = output;
 <footer class="footer-main uppercase">
   <p class="footer-item">Rejoignez <strong> Emirates | The List</strong></p>
   <p class="footer-item footer-item--deco">Vol + hôtel négociés jusqu'à -70%</p>
+  <a href="#site-top" role="button" aria-label="Retour haut de page" class="btn btn--action  btn--scroll-top"><i class="fas fa-arrow-up"></i><span class="sr-only">Retour haut de page</span></a>
 </footer>
 
 <script src="js/inert.js"></script>

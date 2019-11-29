@@ -7,17 +7,17 @@ $( document ).ready(function() {
   $('.the-body').css('padding-bottom', footerHeight);
 
 
-  const el = document.querySelector('.nav-menu');
-    el.inert = true;
+  const navMenu = document.querySelector('.nav-menu');
+    navMenu.inert = true;
    // alternatively, el.setAttribute('inert', '');
 
-  $('.toggle-menu').click(function(){
+  $('.btn--toggle-menu').click(function(){
     $('.nav-menu').toggleClass('nav-menu-is-showing');
     if($('.nav-menu').hasClass('nav-menu-is-showing')) {
-      el.inert = false;
+      navMenu.inert = false;
     }
     else {
-      el.inert = true;
+      navMenu.inert = true;
     }
 
   });
@@ -25,12 +25,18 @@ $( document ).ready(function() {
   $('.skip-link--toggle-menu').click(function(){
     $('.nav-menu').toggleClass('nav-menu-is-showing');
     if($('.nav-menu').hasClass('nav-menu-is-showing')) {
-      el.inert = false;
+      navMenu.inert = false;
     }
     else {
-      el.inert = true;
+      navMenu.inert = true;
     }
 
   });
+
+  $(window).scroll(function() {
+    $(".btn--scroll-top").addClass("btn--scroll-top-is-visible");
+	});
+
+
 
 });
