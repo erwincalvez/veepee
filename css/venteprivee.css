@@ -152,8 +152,8 @@ Navigation
   bottom: 10px;
   right: 10px;
   text-decoration: none;
-  opacity: .1;
-  transition: opacity 300ms;
+  opacity: .05;
+  transition: opacity 500ms;
 }
 
 .btn--scroll-top-is-visible {
