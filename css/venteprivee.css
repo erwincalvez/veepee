@@ -38,6 +38,7 @@
 
 html {
   scroll-behavior: smooth;
+  font-size: 87.5%;
 }
 
 body {
@@ -667,6 +668,10 @@ FOOTER
 
 
 @media screen and (min-width: 960px) {
+
+  html {
+    font-size: 100%;
+  }
 
   .destination-list-group {
     display: flex;
