@@ -18,9 +18,13 @@
 
 </head>
 <body class="the-body">
+  <ul class="skip-links" role="navigation" aria-label="skip links">
+    <li class="skip-links__item"><a href="#nav-menu" class="skip-link--toggle-menu">Main navigation</a></li>
+    <li  class="skip-links__item"><a href="#main-content">Main content</a></li>
+  </ul>
   <header class="header-main">
     <button class="toggle-menu open-menu" type="button" name="button" aria-label="show navigation menu" role="button"><i class="fas fa-bars"></i></button>
-    <nav class="nav-menu" role="navigation">
+    <nav class="nav-menu" role="navigation" id="nav-menu" >
       <button class="toggle-menu close-menu" type="button" name="button" aria-label="close navigation menu" role="button"><i class="fas fa-times"></i></button>
       <ul>
         <li>
@@ -62,7 +66,7 @@ document.getElementById("destin").innerHTML = output;
 
 
 
-<main class="main-home container container__home">
+<main class="main-home container container__home" id="main-content">
   <form class="form-destinations" action="" method="post">
     <div class="custom-select-wrapper">
       <select class="select-css" name="">
